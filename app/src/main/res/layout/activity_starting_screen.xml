@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartingScreen"
+    android:background="@drawable/image2">
+
+    <TextView
+        android:id="@+id/Title_QuizHub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Hub"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginTop="210dp"
+        android:textSize="30dp"
+        android:layout_below="@+id/Title_QuizHub"
+        />
+    <Button
+        android:id="@+id/Button_About"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/background_dark"
+        android:text="About"
+        android:layout_below="@+id/Button_Start"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30dp"
+        android:text="Exit"
+        android:layout_below="@+id/Button_About"/>
+
+</RelativeLayout>
