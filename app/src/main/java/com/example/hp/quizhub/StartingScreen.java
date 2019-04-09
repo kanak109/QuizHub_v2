@@ -28,9 +28,6 @@ public class StartingScreen extends AppCompatActivity {
             }
         });
 
-        // error in finding R, couldn't find why.
-
-
 
 
     }

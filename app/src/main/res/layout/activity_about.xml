@@ -23,7 +23,7 @@
               Kanak Barua Raju
                   (17-01-04-109) "
     android:textSize="30dp"
-    android:textColor="@android:color/background_dark"
+    android:textColor="@color/DarkRed"
     android:textStyle="bold"/>
 
     <Button
@@ -33,7 +33,7 @@
         android:layout_below="@+id/TextView1"
         android:layout_marginTop="200dp"
         android:text="Back"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/Brown"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:textSize="30dp"/>

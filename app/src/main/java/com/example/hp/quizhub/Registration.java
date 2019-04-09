@@ -15,8 +15,8 @@ public class Registration extends AppCompatActivity {
     DatabaseHelper db;
 
     public String username2,userpassword2;
-    private EditText usernameEditText,passwordEditText,userIDEditText ;
-    private Button saveButton,BackButton;
+    private EditText e1,e2,e3 ;
+    private Button b1,b2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,64 +24,47 @@ public class Registration extends AppCompatActivity {
 
         db=new DatabaseHelper(this);
 
+        e1=(EditText)findViewById(R.id.user_name);
+        e2=(EditText)findViewById(R.id.Password);
+        e3=(EditText)findViewById(R.id.ConfirmPassword);
+
+        b1=(Button)findViewById(R.id.Save);
+        b2=(Button)findViewById(R.id.backbuttonID) ;
 
 
-        usernameEditText=findViewById(R.id.UserID);
-        passwordEditText=findViewById(R.id.Password);
-        userIDEditText=findViewById(R.id.UserID);
-        saveButton=findViewById(R.id.Save);
-        BackButton=findViewById(R.id.backbuttonID);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* String user=usernameEditText.getText().toString().trim();
-                String pwd=passwordEditText.getText().toString().trim();
-                String userID=userIDEditText.getText().toString().trim();
-                long val=db.adduser(user,pwd);
 
-                if(val>0)
-                {
-                    if(user.equals(" ")&& pwd.equals(""))
-                    {
-                        Toast.makeText(Registration.this, "You have not add data", Toast.LENGTH_SHORT).show();
+                String s1=e1.getText().toString();
+                String s2=e2.getText().toString();
+                String s3=e3.getText().toString();
+
+                if(s1.equals("")||s2.equals("")||s3.equals("")){
+                    Toast.makeText(getApplicationContext(),"Fields are empty",Toast.LENGTH_LONG).show();
+
+                }
+                else{
+                    if(s2.equals(s3)){
+                        Boolean chkmail=db.chkemail(s1);
+                        if(chkmail==true)
+                        {
+                            Boolean insert=db.insert(s1,s2);
+                            if(insert==true)
+                            {
+                                Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(),"Username already exists",Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    else
-                    {
-                        Toast.makeText(Registration.this, "You have save succesfully", Toast.LENGTH_SHORT).show();
-                    }
-                }*/
-
-                if(v.getId()==R.id.Save)
-                {
-                    String username=usernameEditText.getText().toString();
-                    String userpassword=passwordEditText.getText().toString();
-                    String userID=userIDEditText.getText().toString();
-                    //If User donot give any user name,password,userID
-                    if(username.equals("")&&userpassword.equals("")&&userID.equals(""))
-                    {
-                        Toast.makeText(getApplicationContext(), "Please Enter Some data", Toast.LENGTH_SHORT).show();
-                    }
-                    else
-                    {
-                        //Writing Data
-                        SharedPreferences sharedPreferences=getSharedPreferences("userDetails", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor=sharedPreferences.edit();
-
-                        editor.putString("usernamekey",username);
-                        editor.putString("passwordkey",userpassword);
-                        editor.putString("userIDkey",userID);
-
-                        editor.commit();
-                        String username2=usernameEditText.getText().toString();
-                        String userpassword2=passwordEditText.getText().toString();
-                        Toast.makeText(getApplicationContext(), "Data is stored successfully", Toast.LENGTH_SHORT).show();
-                    }
-
+                    //Toast.makeText(getApplicationContext(),"Password do not match",Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        BackButton.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startingScreen2();

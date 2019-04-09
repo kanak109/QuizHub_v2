@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText userNameEdit,passwordEdit;
+    private EditText e1,e2;
+    private Button b1;
     DatabaseHelper db;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,44 +22,27 @@ public class MainActivity extends AppCompatActivity {
 
         db=new DatabaseHelper(this);
 
-        userNameEdit=findViewById(R.id.UserName);
-        passwordEdit=findViewById(R.id.Password);
-        Button sign_in=findViewById(R.id.Sign_IN);
+        e1=findViewById(R.id.UserName);
+        e2=findViewById(R.id.Password);
+        b1=findViewById(R.id.Sign_IN);
 
-        sign_in.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-             /*   String user=userNameEdit.getText().toString().trim();
-                String pwd=passwordEdit.getText().toString().trim();
-                Boolean res=db.checkUser(user,pwd);
+                String username=e1.getText().toString();
+                String password=e2.getText().toString();
 
-                if(res==true)
+                Boolean Chkemailpass=db.emailpassword(username,password);
+                if(Chkemailpass==true)
                 {
-                    Toast.makeText(MainActivity.this, "You have logged in successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Successfully Login",Toast.LENGTH_SHORT).show();
                     startQuiz3();
                 }
-                else
-                {
-                    Toast.makeText(MainActivity.this, "Login Error", Toast.LENGTH_SHORT).show();
-                }*/
-
-                if(v.getId()==R.id.Sign_IN)
-                {
-                    String userName1=userNameEdit.getText().toString().trim();
-                    String password1=passwordEdit.getText().toString().trim();
-                   Registration rg=new Registration();
-
-                    if(userName1.equals("Rakesh")|| password1.equals("6430"))
-                    {
-                        Toast.makeText(getApplicationContext(), "Data is entered correctly", Toast.LENGTH_SHORT).show();
-                        startQuiz3();
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(), "You entered wrong information", Toast.LENGTH_SHORT).show();
-                    }
+                else{
+                    Toast.makeText(getApplicationContext(), "Wrong username or password", Toast.LENGTH_SHORT).show();
                 }
+
 
             }
         });

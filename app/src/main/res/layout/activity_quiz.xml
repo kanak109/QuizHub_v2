@@ -13,38 +13,47 @@
         android:id="@+id/Score_View"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score:0"
+        android:text="Score:"
+        android:textStyle="bold"
         android:textSize="20sp"
-        android:textColor="@android:color/black" />
+        android:layout_marginLeft="260dp"
+        android:textColor="@color/ForestGreen" />
     <TextView
-        android:id="@+id/Question_Count"
+        android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question:1/x"
-        android:textColor="@android:color/black"
+        android:text="0"
         android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/Score_View"
 
-        />
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+       android:layout_alignParentRight="true"
+        android:textColor="@color/ForestGreen" />
+
+
+
+
     <TextView
         android:id="@+id/text_view_Countdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:30"
         android:textSize="50sp"
-        android:layout_marginRight="20dp"
-        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="200dp"
+        android:textColor="@color/DarkRed"
         android:layout_alignParentRight="true"/>
+
     <TextView
         android:id="@+id/text_view_Question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Here will be the question"
-        android:textSize="20dp"
-        android:textColor="@android:color/black"
         android:layout_above="@+id/Radio_Group"
-        android:layout_marginBottom="45dp"/>
+        android:layout_marginBottom="45dp"
+        android:text="Which thing is alive?"
+        android:background="@color/WhiteSmoke"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
     <RadioGroup
         android:id="@+id/Radio_Group"
         android:layout_width="wrap_content"
@@ -54,7 +63,8 @@
             android:id="@+id/radio_button_Option1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 1"
+            android:text="bird"
+            android:background="@color/WhiteSmoke"
             android:textColor="@android:color/black"
             android:textStyle="bold"/>
 
@@ -62,7 +72,9 @@
             android:id="@+id/radio_button_Option2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 2"
+            android:layout_marginTop="10dp"
+            android:text="door"
+            android:background="@color/WhiteSmoke"
             android:textColor="@android:color/black"
             android:textStyle="bold"/>
 
@@ -70,7 +82,9 @@
             android:id="@+id/radio_button_Option3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 3"
+            android:text="rock"
+            android:layout_marginTop="10dp"
+            android:background="@color/WhiteSmoke"
             android:textColor="@android:color/black"
             android:textStyle="bold"/>
 
@@ -82,6 +96,7 @@
         android:layout_marginTop="45dp"
         android:layout_below="@+id/Radio_Group"
         android:text="Confirm"
+        android:textColor="@color/ForestGreen"
         android:textStyle="bold"/>
 
 

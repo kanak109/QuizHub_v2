@@ -15,9 +15,10 @@
         android:layout_height="wrap_content"
         android:text="Quiz Hub"
         android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"
+        android:textColor="@color/DarkRed"
+        android:background="@color/WhiteSmoke"
         android:textSize="50dp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="70dp"
         />
@@ -33,26 +34,30 @@
         android:drawableLeft="@drawable/ic_action_username"
         android:layout_below="@+id/Title_QuizHub"
         android:hint="Enter your name"
-        android:textColorHint="@android:color/black"
+        android:textStyle="italic"
+        android:textColorHint="@color/Red"
         android:textSize="30dp"
         android:layout_marginTop="30dp"/>
+
     <EditText
         android:id="@+id/Password"
-
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
+        android:layout_width="394dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:drawableLeft="@drawable/ic_action_passwod"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
         android:layout_below="@+id/UserName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_action_passwod"
         android:hint="Enter your password"
-        android:textColorHint="@android:color/black"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/Red"
         android:textSize="30dp"
-        android:layout_marginTop="30dp"/>
+        android:textStyle="italic" />
 
         <Button
             android:id="@+id/Sign-IN"
@@ -61,8 +66,9 @@
             android:text="sign-in"
             android:textSize="30dp"
             android:textStyle="bold"
-            android:layout_marginLeft="40dp"
-            android:background="@android:color/holo_purple"
+            android:layout_marginLeft="50dp"
+            android:background="@color/WhiteSmoke"
+            android:textColor="@color/ForestGreen"
             android:layout_marginTop="400dp"/>
     <Button
         android:id="@+id/Sign-UP"
@@ -71,8 +77,9 @@
         android:text="sign-up"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:layout_marginLeft="200dp"
-        android:background="@android:color/holo_purple"
+        android:layout_marginLeft="220dp"
+        android:background="@color/White"
+        android:textColor="@color/ForestGreen"
         android:layout_marginTop="400dp"/>
 
 
