@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
+import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
 
-     private static final long START_TIME_IN_MILLIS=30000;
+     private static final long START_TIME_IN_MILLIS=600000;
      private TextView mTextViewCountDown;
      private CountDownTimer mCountDownTimer;
      private boolean mTimerRunning;
@@ -162,6 +163,12 @@ public class QuizActivity extends AppCompatActivity {
 
 
     private void updateQuestion(){
+
+        Random rand = new Random();
+        for(int counter=1;counter<=19;counter++){
+            mQuestionNumner=1+rand.nextInt(2);
+        }
+
        mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumner));
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumner));
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumner));

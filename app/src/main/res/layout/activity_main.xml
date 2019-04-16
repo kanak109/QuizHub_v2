@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image2"
+    android:background="@drawable/newimage"
     tools:context=".MainActivity">
 
 
@@ -16,7 +16,6 @@
         android:text="Quiz Hub"
         android:layout_centerHorizontal="true"
         android:textColor="@color/DarkRed"
-        android:background="@color/WhiteSmoke"
         android:textSize="50dp"
         android:textStyle="italic"
         android:layout_marginTop="30dp"
@@ -35,7 +34,7 @@
         android:layout_below="@+id/Title_QuizHub"
         android:hint="Enter your name"
         android:textStyle="italic"
-        android:textColorHint="@color/Red"
+        android:textColorHint="@color/Black"
         android:textSize="30dp"
         android:layout_marginTop="30dp"/>
 
@@ -55,7 +54,7 @@
         android:hint="Enter your password"
         android:inputType="textPassword"
         android:textAlignment="center"
-        android:textColorHint="@color/Red"
+        android:textColorHint="@color/Black"
         android:textSize="30dp"
         android:textStyle="italic" />
 

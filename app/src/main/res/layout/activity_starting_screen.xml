@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StartingScreen"
-    android:background="@drawable/image2">
+    android:background="@drawable/newimage">
 
     <TextView
         android:id="@+id/Title_QuizHub"
